@@ -1,0 +1,110 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Screen shown on user's first entry */
+#entry-screen {
+  background-image: url("../images/camping-background-hazy.jpg");
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#entry-content {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  max-width: 450px;
+  background-color: var(--light);
+  border-radius: 15px;
+  padding: 5vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+label {
+  padding: 0 10px 0 0;
+}
+
+/* User inputs (2) */
+.zip-input {
+  margin: 10px 0 0 0;
+}
+
+header {
+  padding: 20px;
+  height: 10vh;
+  color: var(--light);
+  background-color: var(--primary);
+  border-radius: 0 0 15px 15px;
+}
+
+/* Main Content Container */
+.hide {
+  display: none;
+  font-size: 100vh;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+#content-container {
+  color: var(--light);
+  padding: 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Map results */
+#camp-results {
+  padding-top: 40px;
+  font-size: 100px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#campgrounds {
+  min-height: 50vh;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.history-button {
+  margin-top: 10px;
+}
+
+/* Search Form */
+#col-one .search-form {
+  color: var(--dark);
+  display: flex;
+  justify-content: center;
+}
+
+#col-one .search-form input {
+  width: 90%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Results Section */
+.message {
+  max-width: 600px;
+}
+
+/* Extra Resources Section */
+#resources-container {
+  padding: 20px 0;
+  max-width: 800px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.resource {
+  min-height: 800px;
+  
+}
+
+.resource .button {
+  margin-top: 20px;
+}

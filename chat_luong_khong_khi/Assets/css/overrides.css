@@ -1,0 +1,25 @@
+/* Global styles */
+:root {
+  --primary: #687876;
+  --secondary: #486f6a;
+  --dark: #171716;
+  --light: #000000;
+  --earth: #04b25b;
+  --tigerseye: #2EB872;
+  --corners: 15px;
+}
+
+/* Overrides for Fomantic UI default settings */
+.ui.message {
+  font-size: 16px;
+}
+
+.ui.button {
+  color: var(--light);
+  background: var(--tigerseye);
+}
+
+.ui.button:hover {
+  color: var(--light);
+  background: var(--earth);
+}
