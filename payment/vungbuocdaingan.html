@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Complete your purchase</title>
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
+          rel="stylesheet"
+        />
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <div class="container">
+        <div class="title">
+            <h4>Vững Bước Đại Ngàn - Đồng hành cùng đội ngũ cán bộ kiểm lâm và lực lượng chuyên trách bảo vệ rừng gìn giữ đại ngàn Chư Yang Sin </h4>
+           
+        </div>
+        <p style="color:gray;">❤️ Chung tay gìn giữ 59.278 ha rừng Vườn Quốc gia Chư Yang Sin, góp phần hấp thụ gần 60 triệu tấn CO2 và bảo vệ môi trường sống của con người và các loài động vật hoang dã tại đây.</p><br>
+        <center>
+        <img src="qr-vbdn.png" alt="">
+        
+        </center>
+        <br>
+        <h4>Thông tin quyên góp</h4>
+        <ul>
+            <li>Ví điện tử MOMO</li>
+            <li>Trung tâm hành động vì ĐVHD Việt Nam</li>
+        </ul>    
+    </div>
+
+</body>
+</html>
+<style>
+    a{
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    outline: none;
+    }
+    *{
+        font-family: 'Quicksand', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    .container{
+        background-color: #FFFFFF;
+        width: 800px;
+        border-radius: 8px;
+        padding: 40px;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+                    0 5px 12px -2px rgba(0, 0, 0, 0.1),
+                    0 18px 36px -6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container .title{
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .container form input{
+        display: none;
+    }
+    
+    .container form .category{
+        margin-top: 10px;
+        padding-top: 20px;
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+    
+    .category label{
+        /* width: 100%; */
+        /* height: 65px; */
+        height: 145px;
+        padding: 20px;
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+        display: flex;
+        /* justify-content: space-between; */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    /* label:nth-child(2), label:nth-child(3){
+        margin: 15px 0;
+    } */
+    
+    
+    #visa:checked ~ .category .visaMethod,
+    #mastercard:checked ~ .category .mastercardMethod,
+    #paypal:checked ~ .category .paypalMethod,
+    #AMEX:checked ~ .category .amexMethod{
+        box-shadow: 0px 0px 0px 1px #6064b6;
+    }
+    
+    
+    #visa:checked ~ .category .visaMethod .check,
+    #mastercard:checked ~ .category .mastercardMethod .check,
+    #paypal:checked ~ .category .paypalMethod .check,
+    #AMEX:checked ~ .category .amexMethod .check{
+        display: block;
+    }
+    
+    
+    label .imgName{
+        display: flex;
+        /* justify-content: space-between;
+         */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .imgName span{
+        /* margin-left: 20px; */
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        position:absolute;
+        top: 72%;
+        transform: translateY(-72%);
+    }
+    
+    .imgName .imgContainer{
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        position: absolute;
+        top: 35%;
+        transform: translateY(-35%);
+    }
+    
+    img{
+        width: 320px;
+        height: auto;
+        align-items: center;
+    }
+    
+    .visa img{
+        width: 80px;
+        /* margin-left: 5px; */
+    }
+    
+    .mastercard img{
+        width: 65px;
+    }
+    
+    .paypal img{
+        width: 80px;
+    }
+    
+    .AMEX img{
+        width: 50px;
+    }
+    
+    .check{
+        display: none;
+        position: absolute;
+        top: -4px;
+        right: -4px;
+    }
+    
+    .check i{
+        font-size: 18px;
+    }
+    
+    
+</style>
