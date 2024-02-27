@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand';
+}
+
+body {
+  background-color: #f1f1f1;
+}
+video {
+    width: 100%;
+    height: auto;
+  }
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  width: 80%;
+  min-width: 300px;
+}
+
+h1,h2 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+ 
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: 'Quicksand';
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+</style>
+<body>
+    <nav class="navbar bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">GreenSort</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">GreenSort</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Học vượt?</a>
+                </li>
+               
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+<form id="regForm" action="/action_page.php">
+
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+    <video width="880" height="400" autoplay controls>
+        <source src="onhiemnuoc.mp4" type="video/mp4">
+      Trình duyệt của bạn không hỗ trợ xem video.
+      </video>
+    
+    </div>
+  <div class="tab">
+  <h2>Nguyên nhân của ô nhiễm nguồn nước</h2>
+   <p>Có nhiều nguyên nhân dẫn đến ô nhiễm nước. Một trong những nguyên nhân chính là sự tiêu thụ lớn của con người và công nghiệp. Việc xả thải từ nhà máy sản xuất, nhà máy xử lý và sinh hoạt hàng ngày có thể chứa các hợp chất độc hại như kim loại nặng, thuốc trừ sâu, và hóa chất công nghiệp. Ngoài ra, các hoạt động như nông nghiệp, rừng phòng hộ, và xây dựng cũng góp phần vào vấn đề này thông qua việc rò rỉ phân bón, thuốc trừ sâu, và cả đất đá chứa các chất gây ô nhiễm.</p>
+  </div>
+  <div class="tab">
+    <h2>Hậu quả</h2>
+     <p><b style="color:#2EB872">Ảnh hưởng đến sức khỏe</b><br> Nước ô nhiễm có thể gây ra các vấn đề về sức khỏe như bệnh ung thư, các vấn đề về hô hấp và tiêu hóa.<br>
+        <b style="color:#2EB872" >Tác động đến đời sống dưới nước</b> <br>Ô nhiễm nước cũng ảnh hưởng đến các sinh vật sống trong nước, gây ra tình trạng suy giảm dân số và biến đổi sinh học.<br>
+        <b style="color:#2EB872">Kinh tế và xã hội</b><br> Ô nhiễm nước có thể làm giảm giá trị của các khu vực dân cư, gây ra thiệt hại kinh tế và tăng chi phí y tế.</p>
+
+     
+    </div>
+    <div class="tab">
+      <h2>Cách Phòng Ngừa Ô nhiễm Nước</h2>
+       <p><b style="color:#2EB872">Xử lý nước thải</b><br> Công nghệ xử lý nước thải hiện đại và hiệu quả là cách quan trọng nhất để ngăn chặn ô nhiễm nước.<br>
+        <b style="color:#2EB872">Sử dụng các phương tiện giao thông thân thiện với môi trường</b><br> Sử dụng phương tiện công cộng hoặc phương tiện giao thông ít gây ra ô nhiễm.<br>
+        <b style="color:#2EB872">Sử dụng sản phẩm hữu cơ và tái chế</b><br> Sử dụng sản phẩm hữu cơ và tái chế để giảm lượng chất thải sinh ra.<br>
+        <b style="color:#2EB872"> Giáo dục cộng đồng</b><br> Tăng cường giáo dục cộng đồng về ý thức bảo vệ môi trường và cách sống bền vững.</p>
+      </div>
+      <div class="tab">
+        <h2>Cuộc Đua Kì Thú</h2>
+        <iframe src="https://scratch.mit.edu/projects/972090697/embed" allowtransparency="true" width="100%" height="980px" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+    <div class="tab">
+      <h2>Bài kiểm tra nhận chứng nhận</h2>
+     
+        
+      </div>
+ 
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button class="btn btn-primary" type="button" id="prevBtn" onclick="nextPrev(-1)">Trở về</button>
+      <button class="btn btn-primary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+</form>
+
+<script>
+var currentTab = 0; 
+showTab(currentTab); 
+
+function showTab(n) {
+  
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+ 
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Hoàn thành";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Tiếp";
+  }
+  
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+ 
+  var x = document.getElementsByClassName("tab");
+ 
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+ 
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
