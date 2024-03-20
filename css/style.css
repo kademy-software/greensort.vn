@@ -1,4 +1,4 @@
-/********** Template CSS **********/
+
 :root {
     --primary: #2EB872;
     --light: #F3F4F5;
@@ -327,8 +327,9 @@
 
 /*** Header ***/
 .header-bg {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('https://img.freepik.com/free-photo/majestic-mountain-range-high-up-no-people-generated-by-ai_188544-27307.jpg?t=st=1707060860~exp=1707064460~hmac=d03dda33d49f5cb5583665ab4ad64af338274d869444b9ddabd26878b3f0995d&w=1800') center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('https://static.vinwonders.com/production/du-lich-ha-long-topbanner.jpg') center center no-repeat;
     background-size: cover;
+   
 }
 
 .btn-play {
@@ -526,8 +527,9 @@
 
 /*** Facts & Visiting Hours ***/
 .facts {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/bg-1.jpg) center center no-repeat;
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('https://static.vinwonders.com/production/rung-viet-nam-top-banner.jpg') center center no-repeat;
+    background-size:auto;
+    width: 1700px;
 }
 
 .visiting-hours {
