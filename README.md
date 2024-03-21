@@ -1,5 +1,5 @@
 # greensort.vn
-Introducing GreenSort: Your Partner in Sustainable Waste Management
+Introducing GreenSort: Your Partner in Sustainable Waste Management From VietNam
 
 GreenSort is your comprehensive solution for sustainable waste management. With a mission to reduce waste and promote environmental consciousness, GreenSort offers innovative tools and resources to help individuals and communities minimize their environmental footprint.
 
