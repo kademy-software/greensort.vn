@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand';
+}
+
+body {
+  background-color: #f1f1f1;
+}
+video {
+    width: 100%;
+    height: auto;
+  }
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  width: 80%;
+  min-width: 300px;
+}
+
+h1,h2 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+ 
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: 'Quicksand';
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+</style>
+<body>
+    <nav class="navbar bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">GreenSort</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">GreenSort</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Học vượt?</a>
+                </li>
+               
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+<form id="regForm">
+
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+    <h2>Hãy nhìn vào những hình ảnh này</h2>
+    <img src="https://cdn.luatvietnam.vn/uploaded/Images/Original/2023/04/21/Hieu-dung-o-nhiem-khong-khi-la-gi-voi-bai-viet-nay_2104091646.png" width="400px" height="300px">
+    <img src="https://cdn.tuoitre.vn/thumb_w/480/471584752817336320/2024/3/19/o-nhiem-an-do-17108487985261429300824.jpg" width="400px" height="300px">  
+    <img src="https://images2.thanhnien.vn/528068263637045248/2023/2/2/2023-02-02t130858z1311934525rc2y2z9e19wlrtrmadp3thailand-pollution-16753538510711614600123.jpg" width="400px" height="300px">  
+    <p>Đoán xem đây là?</p>
+    <!-- Thêm câu hỏi trắc nghiệm -->
+    <div class="options-container">
+        <button style="background-color: #04AA6D; border-radius: 5px;" id="choice-A" onclick="checkAnswer('A')" type="button" >Ô Nhiễm Bầu Trời</button>
+        <button style="background-color: #04AA6D; border-radius: 5px" id="choice-B" onclick="checkAnswer('B')" type="button" >Ô Nhiễm Không Khí</button>
+        <button style="background-color: #04AA6D; border-radius: 5px" id="choice-B" onclick="checkAnswer('C')" type="button" >Thành Phố Có Bụi</button>
+    </div>
+    <!-- Thêm phần hiển thị kết quả -->
+    <div id="answer-result"></div>
+</div>
+
+<script>
+function checkAnswer(choice) {
+    // Kiểm tra nếu người dùng chọn tùy chọn A
+    if (choice === 'B') {
+        // Hiển thị "đúng"
+        document.getElementById('answer-result').textContent = 'Đúng';
+    } else {
+        // Nếu chọn tùy chọn khác A, xóa kết quả hiển thị
+        document.getElementById('answer-result').textContent = 'Chưa chính xác, hãy thử lại nhé';
+    }
+}
+</script>
+
+
+  <div class="tab">
+  <h2>Ô Nhiễm Không Khí</h2><br>
+  <p> Ô nhiễm không khí là sự <b>thay đổi lớn</b> trong thành phần của không khí, chủ yếu do khói, bụi, hơi hoặc các khí lạ được đưa vào không khí, có sự tỏa mùi, làm giảm tầm nhìn xa, gây biến đổi khí hậu, gây bệnh cho con người và cũng có thể gây hại cho sinh vật khác như động vật và cây lương thực, nó có thể làm hỏng môi trường </p>
+  </div>
+  <div class="tab">
+    <h2>Thực trạng ô nhiễm môi trường không khí ở Việt Nam & Hậu Quả Của Nó</h2><br>
+     <p>Thực trạng ô nhiễm môi trường không khí đang là vấn đề nhức nhối của thế giới và Việt Nam cũng không là ngoại lệ. Theo Báo cáo thường niên về chỉ số môi trường (The Environmental Performance Index - EPI) do tổ chức Môi trường Mỹ thực hiện, Việt Nam chúng ta là một trong 10 nước ô nhiễm môi trường không khí hàng đầu Châu Á. Tiêu biểu là ô nhiễm bụi (PM 10, PM 2.5).
+
+      Thành phố Hà Nội và Thành phố Hồ Chí Minh là nơi bị ô nhiễm không khí nặng nhất của cả nước, có nhiều thời điểm bụi mịn (PM 2.5) bao phủ cả bầu trời làm hạn chế tầm nhìn, ảnh hưởng rất lớn đến sức khỏe của người dân.<br>
+      <br><strong>Hậu quả :</strong>
+      Ô nhiễm không khí làm cho mọi người phải tiếp xúc với các hạt mịn trong không khí bị ô nhiễm. Các hạt mịn này thâm nhập sâu vào phổi và hệ thống tim mạch, gây ra các bệnh đột quỵ, bệnh tim, ung thư phổi, bệnh phổi tắc nghẽn mãn tính và các bệnh nhiễm trùng đường hô hấp.
+    </p>
+    </div>
+      <div class="tab">
+        <h2>Nguyên Nhân </h2> <br>
+        <ul>
+            <li><strong>Khoáng sản và công nghiệp</strong>: Các nhà máy, nhà máy điện, và các cơ sở công nghiệp thải ra khí thải từ quá trình sản xuất và đốt cháy nhiên liệu.</li>
+            <li><strong>Giao thông</strong>: Phương tiện giao thông đường bộ, đường sắt, và hàng không tạo ra khí thải từ đốt nhiên liệu, đặc biệt là trong khu vực đô thị đông đúc.</li>
+            <li><strong>Đốt cháy rác và nông nghiệp</strong>: Việc đốt cháy rác và sử dụng phân bón hóa học trong nông nghiệp cũng góp phần vào ô nhiễm không khí.</li>
+            <li><strong>Khói từ lò hỏa và đám cháy rừng</strong>: Các hoạt động đốt cháy rừng và lò hỏa gây ra khói và bụi gây ô nhiễm không khí.</li>
+            <li><strong>Công nghệ sản xuất không sạch</strong>: Các phương tiện và thiết bị sản xuất sử dụng năng lượng từ các nguồn hóa thạch và không có hệ thống xử lý khí thải hiệu quả.</li>
+        </ul>
+        </div>
+        <div class="tab">
+            <h2>Giải Pháp Giảm Thiểu </h2> <br>
+            <ul>
+                <li><strong>Sử dụng phương tiện công cộng và giao thông công cộng</strong>: Giảm thiểu lượng khí thải từ xe cộ cá nhân bằng cách sử dụng các phương tiện công cộng như xe buýt, tàu hỏa, hoặc đi bộ.</li>
+                <li><strong>Tiết kiệm năng lượng và sử dụng nguồn năng lượng sạch</strong>: Sử dụng các thiết bị tiết kiệm năng lượng và chuyển sang nguồn năng lượng tái tạo như năng lượng mặt trời hoặc gió.</li>
+                <li><strong>Áp dụng công nghệ xanh và tiến bộ trong sản xuất công nghiệp</strong>: Sử dụng các công nghệ tiên tiến và hiệu quả để giảm thiểu khí thải và ô nhiễm trong quá trình sản xuất.</li>
+                <li><strong>Thúc đẩy việc tái chế và xử lý chất thải</strong>: Tái chế và xử lý chất thải giúp giảm thiểu sự đốt cháy rác và khí thải từ các hoạt động xử lý chất thải.</li>
+            </ul>
+            </div>
+  
+ 
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button  style="background-color: #04AA6D;" type="button" id="prevBtn" onclick="nextPrev(-1)">Trở về</button>
+      <button  style="background-color: #04AA6D;" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    
+  </div>
+</form>
+
+<script>
+var currentTab = 0; 
+showTab(currentTab); 
+
+function showTab(n) {
+  
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+ 
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Tiến đến bài kiểm tra";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Tiếp";
+  }
+  
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+ 
+  var x = document.getElementsByClassName("tab");
+ 
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    window.location.href = "https://forms.gle/ivdYqKtPyvWVDgKc9";
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+ 
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
