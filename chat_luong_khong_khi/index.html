@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  
  
 
   <!-- This will be a Fomantic modal component -->
@@ -51,16 +52,45 @@
 
     <!-- Results Section -->
     <div id="col-two" class="twelve wide column">
-      <h3>Không khí quan trọng trong việc duy trì sự sống trên trái đất, cung cấp oxygen cho sự hô hấp của con người và các loài sống khác, cũng như giữ cho nhiệt độ trái đất ổn định thông qua hiệu ứng nhà kính. <br>Để biết được độ ô nhiễm không khí như thế nào, mời bạn gõ địa điểm vào thanh tìm kiếm.</h3>
+     
       <div id="search-results" class="hidden">
     <!-- Results Section -->
     <div id="col-two" class="twelve wide column">
       <div id="search-results" class="hidden">
-
+        <h3>Không khí quan trọng trong việc duy trì sự sống trên trái đất, cung cấp oxygen cho sự hô hấp của con người và các loài sống khác, cũng như giữ cho nhiệt độ trái đất ổn định thông qua hiệu ứng nhà kính. <br>Để biết được độ ô nhiễm không khí như thế nào, mời bạn gõ địa điểm vào thanh tìm kiếm.</h3>
         <!-- Current AQI results -->
         <div id="current-air">
           <h2 id="display-aqi"></h2>
+          
           <div id="result-msg"></div>
+          <p><strong>Thông tin về chỉ số AQI</strong></p>
+          <table border="1">
+            <tr>
+              <th>Khoảng giá trị AQI</th>
+              <th>Ảnh hưởng đến sức khỏe con người</th>
+            </tr>
+            <tr>
+              <td>&lt;50</td>
+              <td>Chất lượng không khí tốt, không ảnh hưởng đến sức khỏe</td>
+            </tr>
+            <tr>
+              <td>51-100</td>
+              <td>Chất lượng không khí chấp nhận được. Tuy nhiên, đối với những người nhạy cảm (người già, trẻ em, người mắc các bệnh hô hấp, tim mạch..) có thể chịu những tác động nhất định đến sức khỏe.</td>
+            </tr>
+            <tr>
+              <td>101-150</td>
+              <td>Những người nhạy cảm gặp phải các vấn đề về sức khỏe, người bình thường ít ảnh hưởng.</td>
+            </tr>
+            <tr>
+              <td>151-200</td>
+              <td>Những người bình thường bắt đầu có các ảnh hưởng tới nhóm sức khỏe, nhóm người nhạy cảm có vấn đề nghiêm trọng hơn.</td>
+            </tr>
+            <tr>
+              <td>&gt;200</td>
+              <td>Cảnh báo ảnh hưởng đến sức khỏe nghiêm trọng.</td>
+            </tr>
+          </table>
+          
         </div>
 
         <div id="camp-results" class="hide">
